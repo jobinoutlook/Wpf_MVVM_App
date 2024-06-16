@@ -18,7 +18,7 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Button Content="ShowText"  Command="{Binding ShowTextCommand}" HorizontalAlignment="Left" Margin="490,27,0,0" VerticalAlignment="Top" Width="101" Height="26" />
+            <Button Content="Show Books"  Command="{Binding ShowTextCommand}" HorizontalAlignment="Left" Margin="490,27,0,0" VerticalAlignment="Top" Width="101" Height="26" />
         </Grid>
 
     </Grid>

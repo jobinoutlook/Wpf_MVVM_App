@@ -5,15 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_MVVM_App.Views"
         mc:Ignorable="d"
-        Title="ShowText" Height="450" Width="800">
+        Title="Show Books" Height="450" Width="800">
     <Grid>
-        <RichTextBox x:Name="RTxtbox" Margin="191,109,183,123">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="Title"/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
+        <TextBox x:Name="txtTitle" Text="{Binding Title}" HorizontalAlignment="Left" Margin="290,59,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="132" Height="30"/>
+        <Button x:Name="btnAddBook" Content="Add Book" HorizontalAlignment="Left" Margin="464,60,0,0" VerticalAlignment="Top" Width="100" Height="28" Command="{Binding AddBookCommand}"/>
+        <TextBox x:Name="txtAuthor" Text="{Binding Author}" HorizontalAlignment="Left" Margin="142,59,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="132" Height="30"/>
+        <Label Content="Author" HorizontalAlignment="Left" Margin="154,26,0,0" VerticalAlignment="Top" Width="117"/>
+        <Label Content="Title" HorizontalAlignment="Left" Margin="294,27,0,0" VerticalAlignment="Top" Width="117"/>
+        <ListView ItemsSource="{Binding Books}" Margin="86,120,99,73">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Author}" Header="Author" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Title}" Header="Title"  Width="200"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>

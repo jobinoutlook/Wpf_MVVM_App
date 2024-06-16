@@ -24,10 +24,8 @@ namespace Wpf_MVVM_App.Views
         {
             InitializeComponent();
 
-            //ShowTextViewModel showTextVM = new ShowTextViewModel();
-            //this.DataContext = showTextVM;
-
-            //RTxtbox.AppendText(Title);
+            ShowTextViewModel showTextViewModel = new ShowTextViewModel();
+            this.DataContext = showTextViewModel;
         }
     }
 }
