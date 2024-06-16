@@ -10,7 +10,7 @@ using Wpf_MVVM_App.Models;
 
 namespace Wpf_MVVM_App.ViewModel
 {
-    public class ShowTextViewModel
+    public class ShowBooksViewModel
     {
         public ObservableCollection<Book> Books { get; set; }
 
@@ -19,7 +19,7 @@ namespace Wpf_MVVM_App.ViewModel
 
         public string? Title { get; set; }
 
-        public ShowTextViewModel()
+        public ShowBooksViewModel()
         {
             Books = BookManager.GetBooks();
 

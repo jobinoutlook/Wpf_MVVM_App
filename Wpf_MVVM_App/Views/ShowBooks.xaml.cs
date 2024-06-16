@@ -24,7 +24,7 @@ namespace Wpf_MVVM_App.Views
         {
             InitializeComponent();
 
-            ShowTextViewModel showTextViewModel = new ShowTextViewModel();
+            ShowBooksViewModel showTextViewModel = new ShowBooksViewModel();
             this.DataContext = showTextViewModel;
         }
     }
